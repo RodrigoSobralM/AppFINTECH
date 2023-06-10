@@ -6,38 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <section id="login">
+    <section id="login" class="hidden">
         <header>
             <img src="assets/logo.svg" alt="">
             <h1>FINTECH</h1>
         </header>
         <div class="form-group">
             <label for="">CPF:</label>
-            <input id="cpf" type="text" maxlength="14" placeholder="Insira seu CPF/CNPJ">
+            <input class="verificar" id="cpfCnpj" type="text" maxlength="16" placeholder="Insira seu CPF/CNPJ">
         </div>
         <div class="form-group">
             <label for="">Senha:</label>
-            <input type="password" placeholder="Insira sua senha">
+            <input class="verificar" id="senha" type="password" placeholder="Insira sua senha">
             <h5>Esqueceu sua senha ?<a href="">Clique aqui</a></h5>
         </div>
         <div id="btn">
-            <button>ENTRAR</button>
+            <button id="btnEntrar">ENTRAR</button>
             <h5>Não possui conta ? <a href="" id="cadastrar">Faça seu cadastro aqui</a></h5>
         </div>
     </section>
-    <section id="cadastro">
+    <section id="cadastro" class="hidden">
         <header>
             <img id="logo" src="assets/logo.svg" alt="">
             <h1>FINTECH CADASTRO</h1>
         </header>
         <form id="ficha" action="">
             <div class="forms-groups">
-                <input type="number" id="cpf" class="input-field" required />
+                <input type="text" id="cpfCnpj" maxlength="16" class="input-field" required />
                 <label for="input" class="input-label">CPF/CNPJ:</label>
                 <div class="input-underline"></div>
             </div>
@@ -76,6 +76,49 @@
                 <h5>Já é cadastrado ? <a href="" id="returnLogin">Faça seu login</a></h5>
             </div>
         </form>
+    </section>
+    <section id="home">
+        <header>
+            <div id="perfil">
+                <img src="assets/iconPerfil.svg" alt="">
+                <h1>Bom dia,<br>(Cliente)</h1>
+            </div>
+            <div id="sair">
+                <img id="btnSair" src="assets/iconHome.svg" alt="">
+                <h5>Sair</h5>
+            </div>
+        </header>
+        <main>
+            <div id="dtReceber">
+                <h2>Total a receber:</h2>
+                <div id="vlReceber">
+                    <h1>R$ 0,00</h1>
+                    <button>DETALHES</button>
+                </div>
+            </div>
+            <div id="dtGastos">
+                <h2>Total de gastos:</h2>
+                <div id="vlGastos">
+                    <h1>R$ 0,00</h1>
+                    <button>DETALHES</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="btnFooter">
+                <button>CADASTRAR GASTOS</button>
+                <button>CADASTRAR RECEBIMENTOS</button>
+            </div>
+            <div id="logoFooter">
+                <div id="lg">
+                    <img src="assets/logo.svg" alt="">
+                    <h1>FINTECH</h1>
+                </div>
+                <div id="slogan">
+                    <p>"Controle financeiro fácil e seguro com Fintech".</p>
+                </div>
+            </div>
+        </footer>
     </section>
 </body>
 <script src="main.js"></script>

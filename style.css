@@ -5,7 +5,7 @@ body {
     height: 568px;
 }
 
-/* estilização tela de login*/
+/* Estilização tela de login */
 #login {
     display: flex;
     flex-direction: column;
@@ -20,16 +20,13 @@ header {
     gap: 11px;
 }
 
-
 header h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 40px;
     line-height: 49px;
     color: #FFFFFF;
 }
-
 
 .form-group {
     display: flex;
@@ -39,8 +36,7 @@ header h1 {
 .form-group label {
     margin-bottom: 11px;
     margin-top: 11px;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -52,14 +48,13 @@ header h1 {
 .form-group h5 {
     margin: 0;
     margin-top: 11px;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     color: #FFFFFF;
-
 }
+
 .form-group input {
     width: 236px;
     height: 35px;
@@ -87,20 +82,23 @@ header h1 {
     width: 150px;
     height: 35px;
     background: #FF2929;
+    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 10px;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 10px;
     line-height: 12px;
     color: white;
 }
 
+#btn button:hover {
+    background: #c41f1f;
+}
+
 #btn h5 {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
@@ -108,18 +106,20 @@ header h1 {
 }
 
 ::placeholder {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
-/* estilização ficha de cadastro */
+/* Estilização ficha de cadastro */
 #cadastro {
     display: none;
+    flex-direction: column;
+   
 }
+
 #cadastro header {
     display: flex;
     align-items: center;
@@ -134,8 +134,7 @@ header h1 {
 }
 
 #cadastro header h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
@@ -143,7 +142,7 @@ header h1 {
     margin: 0;
 }
 
-/* estilização formulario cadastro */
+/* Estilização formulário de cadastro */
 #ficha {
     margin-top: 30.64px;
     display: flex;
@@ -156,8 +155,8 @@ header h1 {
 .forms-groups {
     position: relative;
     margin-bottom: 20px;
-  }
-  
+}
+
 .input-field {
     width: 257px;
     margin-bottom: 11px;
@@ -165,34 +164,32 @@ header h1 {
     border: none;
     outline: none;
     background-color: transparent;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 12px;
     color: #FFFFFF;
 }
-  
+
 .input-label {
     position: absolute;
     top: 10px;
     left: 10px;
     pointer-events: none;
     transition: all 0.3s ease;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     color: white;
     margin-bottom: 11px;
 }
-  
+
 .forms-groups.active .input-label {
     top: -20px;
     color: white;
 }
-  
+
 .input-underline {
     position: absolute;
     bottom: 0;
@@ -205,8 +202,7 @@ header h1 {
 #ficha button {
     width: 150px;
     height: 35px;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 10px;
     line-height: 12px;
@@ -222,10 +218,253 @@ header h1 {
     margin: 0;
     margin-top: 11px;
     text-align: center;
-    font-family: 'Montserrat';
-    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
+    color: #FFFFFF;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Estilização home */
+#home {
+    display: none;
+    flex-direction: column;
+}
+#home header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 137px;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+} 
+
+#perfil h1 {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+#sair {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 27px;
+}
+
+#sair h5 {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    margin-left: 6px;
+    color: #FFFFFF;
+}
+
+#home main {
+    margin-left: 37px;
+    margin-top: 57px;
+    width: 248px;
+    height: 144px;
+    background: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#dtReceber {
+    padding-top: 13px;
+}
+
+#dtReceber h2 {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    margin-left: 9px;
+    color: #FFFFFF;
+}
+
+#vlReceber {
+    display: flex;
+    margin-left: 9px;
+    gap: 75px;
+    margin-top: 7px;
+}
+
+#vlReceber h1 {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+#vlReceber button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 76px;
+    height: 24px;
+    border: none;
+    background: #FF2929;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 500px;
+}
+
+#dtGastos {
+    margin-top: 18px;
+}
+#dtGastos h2 {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    margin-left: 9px;
+    color: #FFFFFF;
+}
+
+#vlGastos {
+    display: flex;
+    margin-left: 9px;
+    gap: 75px;
+    margin-top: 7px;
+}
+
+#vlGastos h1 {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+#vlGastos button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 76px;
+    height: 24px;
+    border: none;
+    background: #FF2929;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 500px;
+}
+
+#btnFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 62px;
+}
+
+#btnFooter button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 112px;
+    height: 36px;
+    border: none;
+    background: #FF2929;
+    border-radius: 10px;
+}
+
+#logoFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+#lg {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+#lg h1{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+
+    color: #FFFFFF;
+
+}
+
+#slogan p {
+    margin: 0;
+    margin-top: 11px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
     color: #FFFFFF;
 }
