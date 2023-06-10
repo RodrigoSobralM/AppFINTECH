@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(180deg, #FF2929 0%, #000000 100%);
+    width: 320px;
+    height: 568px;
+}
+
+/* estilização tela de login*/
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+header {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+}
+
+
+header h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 11px;
+    margin-top: 11px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    width: 48px;
+    height: 13px;
+    color: #FFFFFF;
+}
+
+.form-group h5 {
+    margin: 0;
+    margin-top: 11px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+
+}
+.form-group input {
+    width: 236px;
+    height: 35px;
+    background: #000000;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0;
+    padding-left: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn button {
+    margin-top: 34px;
+    width: 150px;
+    height: 35px;
+    background: #FF2929;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    color: white;
+}
+
+#btn h5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
+
+::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF
+}
+
+/* estilização ficha de cadastro */
+#cadastro {
+    display: none;
+}
+#cadastro header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.25px;
+    margin-top: 17px;
+}
+
+#logo {
+    width: 36.36px;
+    height: 36.36px;
+}
+
+#cadastro header h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: white;
+    margin: 0;
+}
+
+/* estilização formulario cadastro */
+#ficha {
+    margin-top: 30.64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.forms-groups {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+.input-field {
+    width: 257px;
+    margin-bottom: 11px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
+  
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    margin-bottom: 11px;
+}
+  
+.forms-groups.active .input-label {
+    top: -20px;
+    color: white;
+}
+  
+.input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 257px;
+    height: 1px;
+    background-color: white;
+}
+
+#ficha button {
+    width: 150px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    border: none;
+    color: #FFFFFF;
+    background: #FF2929;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#ficha h5 {
+    margin: 0;
+    margin-top: 11px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
