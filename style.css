@@ -225,10 +225,6 @@ header h1 {
     color: #FFFFFF;
 }
 
-.hidden {
-    display: none;
-}
-
 .slide-in {
     animation: slideIn 0.5s forwards;
 }
@@ -299,6 +295,10 @@ header h1 {
     line-height: 12px;
     margin-left: 6px;
     color: #FFFFFF;
+}
+
+#btnSair {
+    cursor: pointer;
 }
 
 #home main {
