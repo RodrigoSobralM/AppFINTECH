@@ -50,25 +50,32 @@ let campRequired = document.querySelectorAll('.campRequired')
 
 console.log(campRequired)
 
+verificando.forEach((input, index) => {
+  input.addEventListener('input', () => {
+      if (input.value !== "") {
+          campRequired[index].innerHTML = '';
+      }
+  });
+});
+
 btnEntrar.addEventListener('click', (event) => {
-    event.preventDefault();
-    for (let i = 0; i < verificando.length; i++) {
-        if (verificando[i].value === "") {
-            campRequired[i].innerHTML = 'Preencha o campo acima'
-            campRequired[i].style.color = 'red'
-            campRequired[i].style.fontFamily = 'Montserrat'
-            campRequired[i].style.fontSize = '10px'
-        }
-        else {
-          campRequired[i].innerHTML = ''
-        }
-    }
-    const todosPreenchidos = Array.from(verificando).every(input => input.value.trim() !== "");
-    
-    if (todosPreenchidos) {
-        homeSection.style.display = 'flex';
-        loginSection.style.display = 'none';
-    }
+  event.preventDefault();
+  for (let i = 0; i < verificando.length; i++) {
+      if (verificando[i].value === "") {
+          campRequired[i].innerHTML = 'Preencha o campo acima';
+          campRequired[i].style.color = 'red';
+          campRequired[i].style.fontFamily = 'Montserrat';
+          campRequired[i].style.fontSize = '10px'
+      } else {
+          campRequired[i].innerHTML = '';
+      }
+  }
+  const todosPreenchidos = Array.from(verificando).every(input => input.value.trim() !== "");
+  
+  if (todosPreenchidos) {
+      homeSection.style.display = 'flex';
+      loginSection.style.display = 'none';
+  }
 });
     
 btnSair.addEventListener('click', (event) => {
