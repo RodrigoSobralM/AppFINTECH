@@ -46,13 +46,21 @@ const btnEntrar = document.getElementById("btnEntrar")
 const btnSair = document.getElementById('btnSair')
 const verificando = document.querySelectorAll('.verificar')
 const senha = document.getElementById('senha')
+let campRequired = document.querySelectorAll('.campRequired')
+
+console.log(campRequired)
 
 btnEntrar.addEventListener('click', (event) => {
     event.preventDefault();
     for (let i = 0; i < verificando.length; i++) {
         if (verificando[i].value === "") {
-            alert('Preencha os campos');
-            return;
+            campRequired[i].innerHTML = 'Preencha o campo acima'
+            campRequired[i].style.color = 'red'
+            campRequired[i].style.fontFamily = 'Montserrat'
+            campRequired[i].style.fontSize = '10px'
+        }
+        else {
+          campRequired[i].innerHTML = ''
         }
     }
     const todosPreenchidos = Array.from(verificando).every(input => input.value.trim() !== "");
@@ -60,8 +68,6 @@ btnEntrar.addEventListener('click', (event) => {
     if (todosPreenchidos) {
         homeSection.style.display = 'flex';
         loginSection.style.display = 'none';
-    } else {
-        alert('Preencha todos os campos');
     }
 });
     
