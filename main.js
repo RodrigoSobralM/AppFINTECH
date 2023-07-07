@@ -1,5 +1,15 @@
 // // Mascara formato CPF
 const cpfCnpj = document.querySelectorAll('#cpfCnpj');
+const cadastrarLink = document.getElementById('cadastrar');
+const returnLoginLink = document.getElementById('returnLogin');
+const loginSection = document.getElementById('login');
+const cadastroSection = document.getElementById('cadastro');
+const homeSection = document.getElementById('home')
+const btnEntrar = document.getElementById("btnEntrar")
+const btnSair = document.getElementById('btnSair')
+const verificando = document.querySelectorAll('.verificar')
+const senha = document.getElementById('senha')
+let campRequired = document.querySelectorAll('.campRequired')
 
 for (let i = 0; i < cpfCnpj.length; i++) {
   cpfCnpj[i].addEventListener('input', function(event) {
@@ -37,16 +47,6 @@ const inputContainers = document.querySelectorAll('.forms-groups');
     }
 
 // // Movimento entre telas
-const cadastrarLink = document.getElementById('cadastrar');
-const returnLoginLink = document.getElementById('returnLogin');
-const loginSection = document.getElementById('login');
-const cadastroSection = document.getElementById('cadastro');
-const homeSection = document.getElementById('home')
-const btnEntrar = document.getElementById("btnEntrar")
-const btnSair = document.getElementById('btnSair')
-const verificando = document.querySelectorAll('.verificar')
-const senha = document.getElementById('senha')
-let campRequired = document.querySelectorAll('.campRequired')
 
 console.log(campRequired)
 
@@ -61,14 +61,31 @@ verificando.forEach((input, index) => {
 btnEntrar.addEventListener('click', (event) => {
   event.preventDefault();
   for (let i = 0; i < verificando.length; i++) {
+    if (verificando[i].value === "") {
+      campRequired[i].innerHTML = 'Preencha o campo acima';
+      campRequired[i].style.color = 'red';
+      campRequired[i].style.fontFamily = 'Montserrat';
+      campRequired[i].style.fontSize = '10px';
+    }
+  }
+  const todosPreenchidos = Array.from(verificando).every(input => input.value.trim() !== "");
+
+  if (todosPreenchidos) {
+    homeSection.style.display = 'flex';
+    loginSection.style.display = 'none';
+  }
+
+})
+
+btnEntrar.addEventListener('click', (event) => {
+  event.preventDefault();
+  for (let i = 0; i < verificando.length; i++) {
       if (verificando[i].value === "") {
           campRequired[i].innerHTML = 'Preencha o campo acima';
           campRequired[i].style.color = 'red';
           campRequired[i].style.fontFamily = 'Montserrat';
           campRequired[i].style.fontSize = '10px'
-      } else {
-          campRequired[i].innerHTML = '';
-      }
+      } 
   }
   const todosPreenchidos = Array.from(verificando).every(input => input.value.trim() !== "");
   

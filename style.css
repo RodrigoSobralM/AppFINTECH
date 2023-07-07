@@ -1,16 +1,23 @@
-body {
+* {
     margin: 0;
-    background-image: linear-gradient(180deg, #FF2929 0%, #000000 100%);
-    width: 320px;
-    height: 568px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-image: linear-gradient(180deg, #FF2929 0%, #000000 100%);
+}
+
+a {
+    color: white;
+    font-weight: 600
+}
 /* Estilização tela de login */
 #login {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 32px;
+    height: 100vh;
 }
 
 header {
@@ -18,6 +25,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 11px;
+    margin-bottom: 32px;
 }
 
 header h1 {
@@ -35,7 +43,7 @@ header h1 {
 
 .form-group label {
     margin-bottom: 11px;
-    margin-top: 11px;
+    margin-top: 6px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 12px;
@@ -98,6 +106,7 @@ header h1 {
 }
 
 #btn h5 {
+    margin-top: 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 10px;
@@ -114,10 +123,10 @@ header h1 {
 }
 
 /* Estilização ficha de cadastro */
+
 #cadastro {
     display: none;
     flex-direction: column;
-   
 }
 
 #cadastro header {
@@ -150,6 +159,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    margin-bottom: 15px;
 }
 
 .forms-groups {
@@ -225,6 +235,8 @@ header h1 {
     color: #FFFFFF;
 }
 
+/* Animação da tela login para cadastro*/
+
 .slide-in {
     animation: slideIn 0.5s forwards;
 }
@@ -252,9 +264,12 @@ header h1 {
 }
 
 /* Estilização home */
+
 #home {
     display: none;
     flex-direction: column;
+    width: 100%;
+    height: 568px;
 }
 #home header {
     display: flex;
@@ -300,9 +315,13 @@ header h1 {
 #btnSair {
     cursor: pointer;
 }
-
 #home main {
-    margin-left: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeMain {
     margin-top: 57px;
     width: 248px;
     height: 144px;
@@ -413,15 +432,16 @@ header h1 {
 #btnFooter {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 62px;
+    gap: 75px;
 }
 
 #btnFooter button {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 12px;
     text-align: center;
     color: #FFFFFF;
@@ -438,6 +458,7 @@ header h1 {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 15px;
 }
 #lg {
     display: flex;
